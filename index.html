@@ -39,7 +39,7 @@
             padding: 5px 0;
         }
         a {
-            color: #8be9fd;
+            color: #1a1aff; /* Dark Blue */
             text-decoration: none;
         }
         a:hover {
@@ -70,6 +70,11 @@
         .section:nth-child(3) {
             z-index: 1;
         }
+        .section.contact {
+            grid-column: span 2;
+            text-align: center;
+            transform: translateX(0) translateY(10px);
+        }
         @media (max-width: 800px) {
             .container {
                 grid-template-columns: 1fr;
@@ -86,6 +91,17 @@
         <h1>★☆ xoXNEOXox ☆★</h1>
 
         <div class="section">
+            <h2>Hobbies & Interests</h2>
+            <ul>
+                <li>🎵 <strong>Listening to Music:</strong> Exploring various genres and discovering new tunes.</li>
+                <li>📚 <strong>Reading Mangas/Books:</strong> Diving into captivating stories and adventures.</li>
+                <li>🏃 <strong>Sport:</strong> Staying active and fit through different physical activities.</li>
+                <li>🎭 <strong>Roleplay:</strong> Engaging in imaginative and immersive role-playing scenarios.</li>
+                <li>🎨 <strong>Drawing:</strong> Creating art and expressing creativity through illustrations.</li>
+            </ul>
+        </div>
+
+        <div class="section">
             <h2>Personal Information</h2>
             <ul>
                 <li><strong>Name:</strong> Jay / JayJay</li>
@@ -94,17 +110,6 @@
                 <li><strong>Pronouns:</strong> He/Them</li>
                 <li><strong>Relationship Status:</strong> Single</li>
                 <li><strong>Gaming Alias:</strong> ★☆FemBoyLover☆★</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Hobbies & Interests</h2>
-            <ul>
-                <li>🎵 <strong>Listening to Music:</strong> Exploring various genres and discovering new tunes.</li>
-                <li>📚 <strong>Reading Mangas/Books:</strong> Diving into captivating stories and adventures.</li>
-                <li>🏃 <strong>Sport:</strong> Staying active and fit through different physical activities.</li>
-                <li>🎭 <strong>Roleplay:</strong> Engaging in imaginative and immersive role-playing scenarios.</li>
-                <li>🎨 <strong>Drawing:</strong> Creating art and expressing creativity through illustrations.</li>
             </ul>
         </div>
 
@@ -130,7 +135,7 @@
             </ul>
         </div>
 
-        <div class="section">
+        <div class="section contact">
             <h2>Contact & Social</h2>
             <ul>
                 <li>🎮 <strong>Gaming Platforms:</strong> <a href="https://steamcommunity.com/id/ThexoXNEOXox/" target="_blank">Steam</a></li>
@@ -140,8 +145,5 @@
 
         <p style="grid-column: span 2; text-align: center;">Stay connected and let's conquer the world together! 🌟</p>
     </div>
-</body>
-</html>
-
 </body>
 </html>
