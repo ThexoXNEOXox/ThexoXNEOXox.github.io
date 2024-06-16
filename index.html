@@ -13,14 +13,14 @@
             color: #333;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            align-items: flex-start;
+            min-height: 100vh;
         }
         .container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(5, auto);
-            gap: 20px;
+            gap: 40px; /* Increased gap to lower sections */
             max-width: 1000px;
             width: 100%;
             padding: 20px;
@@ -55,23 +55,23 @@
             z-index: 1;
         }
         .section:nth-child(odd) {
-            transform: translateX(-10%) translateY(-10px);
+            transform: translateX(-10%) translateY(20px); /* Increased translateY */
             z-index: 2;
         }
         .section:nth-child(even) {
-            transform: translateX(10%) translateY(10px);
+            transform: translateX(10%) translateY(20px); /* Increased translateY */
         }
         .section:nth-child(1) {
             z-index: 3;
         }
         .section:nth-child(2) {
             z-index: 4;
-            margin-top: -60px;
+            margin-top: -40px; /* Adjusted margin-top */
         }
         .section.contact {
             grid-column: span 2;
             text-align: center;
-            transform: translateX(0) translateY(10px);
+            transform: translateX(0) translateY(20px); /* Increased translateY */
         }
         @media (max-width: 800px) {
             .container {
@@ -100,7 +100,7 @@
             </ul>
         </div>
 
-        <div class="section" style="z-index: 4; margin-top: -60px;">
+        <div class="section" style="z-index: 4; margin-top: -40px;">
             <h2>Hobbies & Interests</h2>
             <ul>
                 <li>🎵 <strong>Listening to Music:</strong> Exploring various genres and discovering new tunes.</li>
@@ -145,3 +145,4 @@
     </div>
 </body>
 </html>
+
