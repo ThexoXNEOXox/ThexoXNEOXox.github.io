@@ -11,27 +11,27 @@
             padding: 20px;
             background-color: #121212;
             color: #f4f4f4;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, auto);
-            gap: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
-            align-items: start;
         }
         .container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto auto;
+            grid-template-rows: repeat(5, auto);
             gap: 20px;
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 1000px;
+            width: 100%;
             background: #1e1e1e;
+            padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         h1, h2 {
             color: #ff79c6;
             margin-top: 0;
+            text-align: center;
+            grid-column: span 2;
         }
         ul {
             list-style: none;
@@ -48,24 +48,32 @@
             text-decoration: underline;
         }
         .section {
-            padding: 20px;
             background: #282a36;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
         .section:nth-child(odd) {
-            transform: translateX(-20px);
+            transform: translateX(-10%);
         }
         .section:nth-child(even) {
-            transform: translateX(20px);
+            transform: translateX(10%);
+        }
+        @media (max-width: 800px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .section {
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 style="grid-column: span 2; text-align: center;">★☆ xoXNEOXox ☆★</h1>
+        <h1>★☆ xoXNEOXox ☆★</h1>
 
-        <div class="section" style="grid-row: 1; grid-column: 1;">
+        <div class="section">
             <h2>Personal Information</h2>
             <ul>
                 <li><strong>Name:</strong> Jay / JayJay</li>
@@ -77,7 +85,7 @@
             </ul>
         </div>
 
-        <div class="section" style="grid-row: 2; grid-column: 2;">
+        <div class="section">
             <h2>Hobbies & Interests</h2>
             <ul>
                 <li>🎵 <strong>Listening to Music:</strong> Exploring various genres and discovering new tunes.</li>
@@ -88,7 +96,7 @@
             </ul>
         </div>
 
-        <div class="section" style="grid-row: 3; grid-column: 1;">
+        <div class="section">
             <h2>Favorite Games</h2>
             <ul>
                 <li><strong>Game 1:</strong> <a href="http://store.steampowered.com/app/381210/Dead_by_Daylight/" target="_blank">Dead by Daylight</a></li>
@@ -99,7 +107,7 @@
             </ul>
         </div>
 
-        <div class="section" style="grid-row: 4; grid-column: 2;">
+        <div class="section">
             <h2>Favorite Songs</h2>
             <ul>
                 <li><strong>Song 1:</strong> <a href="https://open.spotify.com/intl-de/track/0C4ejWmOTMv8vuYj85mf8m?si=3a02b7b2a39b49af" target="_blank">S&M</a></li>
@@ -110,7 +118,7 @@
             </ul>
         </div>
 
-        <div class="section" style="grid-row: 5; grid-column: 1;">
+        <div class="section">
             <h2>Contact & Social</h2>
             <ul>
                 <li>🎮 <strong>Gaming Platforms:</strong> <a href="https://steamcommunity.com/id/ThexoXNEOXox/" target="_blank">Steam</a></li>
@@ -122,4 +130,3 @@
     </div>
 </body>
 </html>
-
