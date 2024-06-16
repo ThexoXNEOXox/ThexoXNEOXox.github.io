@@ -23,30 +23,41 @@ body {
     text-align: center;
     grid-column: span 2;
     margin-bottom: 50px; 
-    margin-top: 50px; /* Adjust to position lower */
+    margin-top: 100px; /* Adjust to position lower */
 }
 .profile img {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 250px; /* Increase size */
+    height: 250px; /* Increase size */
 }
 .name-title {
     position: absolute;
-    top: 160px; /* Adjust to position the text correctly */
+    top: 50px; /* Adjust to position the text correctly */
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.5em;
     color: #9400D3; /* Dark Purple */
     white-space: nowrap;
-    width: 100%;
     text-align: center;
-    padding: 0 10px;
 }
 .name-title span {
     display: inline-block;
     position: relative;
     transform: rotate(0deg);
 }
+.name-title span:nth-child(1) { left: -100px; }
+.name-title span:nth-child(2) { left: -80px; }
+.name-title span:nth-child(3) { left: -60px; }
+.name-title span:nth-child(4) { left: -40px; }
+.name-title span:nth-child(5) { left: -20px; }
+.name-title span:nth-child(6) { left: 0; }
+.name-title span:nth-child(7) { left: 20px; }
+.name-title span:nth-child(8) { left: 40px; }
+.name-title span:nth-child(9) { left: 60px; }
+.name-title span:nth-child(10) { left: 80px; }
+.name-title span:nth-child(11) { left: 100px; }
+.name-title span:nth-child(12) { left: 120px; }
+.name-title span:nth-child(13) { left: 140px; }
 ul {
     list-style: none;
     padding: 0;
