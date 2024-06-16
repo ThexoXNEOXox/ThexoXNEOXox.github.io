@@ -22,8 +22,8 @@ body {
     position: relative;
     text-align: center;
     grid-column: span 2;
-    margin-top: 50px; /* Position profile picture lower */
-    margin-bottom: 10px;
+    margin-top: 100px; /* Adjust to position lower */
+    margin-bottom: 0; /* Remove margin */
 }
 .profile img {
     border-radius: 50%;
@@ -32,12 +32,12 @@ body {
 }
 .name-title {
     position: relative;
-    font-size: 2em;
+    font-size: 2.5em;
     color: #9400D3; /* Dark Purple */
     text-align: center;
     width: 100%;
-    margin-top: 20px; /* Space between profile picture and name */
-    margin-bottom: 20px; /* Space between name and info boxes */
+    margin-top: 10px; /* Space between profile picture and name */
+    margin-bottom: 30px; /* Space between name and info boxes */
 }
 ul {
     list-style: none;
@@ -61,19 +61,6 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 1;
-}
-.section:nth-child(odd) {
-    transform: translateX(-10%) translateY(20px); /* Increased translateY */
-    z-index: 2;
-}
-.section:nth-child(even) {
-    transform: translateX(10%) translateY(20px); /* Increased translateY */
-}
-.section:nth-child(1) {
-    z-index: 3;
-}
-.section:nth-child(2) {
-    z-index: 4;
     margin-top: 20px; /* Adjusted margin-top */
 }
 .section.contact {
