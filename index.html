@@ -25,17 +25,11 @@
             width: 100%;
             padding: 20px;
         }
-        h1, h2 {
-            color: #9400D3;
-            margin-top: 0;
-            text-align: center;
-            grid-column: span 2;
-        }
         .profile {
             position: relative;
             text-align: center;
             grid-column: span 2;
-            margin-bottom: -50px;
+            margin-bottom: 50px;
         }
         .profile img {
             border-radius: 50%;
@@ -44,15 +38,13 @@
         }
         .name-title {
             position: absolute;
-            top: 0;
+            top: 20px;
             left: 50%;
             transform: translateX(-50%);
             font-size: 1.5em;
             color: #9400D3;
             white-space: nowrap;
-            width: 100%;
             text-align: center;
-            transform: translate(-50%, -100%);
         }
         ul {
             list-style: none;
@@ -78,23 +70,23 @@
             z-index: 1;
         }
         .section:nth-child(odd) {
-            transform: translateX(-10%) translateY(20px);
+            transform: translateX(-10%) translateY(40px);
             z-index: 2;
         }
         .section:nth-child(even) {
-            transform: translateX(10%) translateY(20px);
+            transform: translateX(10%) translateY(40px);
         }
         .section:nth-child(1) {
             z-index: 3;
         }
         .section:nth-child(2) {
             z-index: 4;
-            margin-top: -40px;
+            margin-top: 20px;
         }
         .section.contact {
             grid-column: span 2;
             text-align: center;
-            transform: translateX(0) translateY(20px);
+            transform: translateX(0) translateY(40px);
         }
         @media (max-width: 800px) {
             .container {
@@ -115,24 +107,24 @@
 </head>
 <body>
     <div class="container">
-        </div><div class="profile">
-    <img src="https://cdn.discordapp.com/attachments/1190964457040515072/1251854524012822609/IMG_20240423_125552_929.jpg?ex=667017e0&is=666ec660&hm=e01a59d6ec74f0061b9449b46350bca371b7f6d9cb725b11538c590a22a7e300&" alt="Profile Picture">
-    <div class="name-title">
-        <span style="transform: rotate(-15deg); display: inline-block;">★</span>
-        <span style="transform: rotate(-10deg); display: inline-block;">☆</span>
-        <span style="transform: rotate(-5deg); display: inline-block;">x</span>
-        <span style="transform: rotate(0deg); display: inline-block;">o</span>
-        <span style="transform: rotate(5deg); display: inline-block;">X</span>
-        <span style="transform: rotate(10deg); display: inline-block;">N</span>
-        <span style="transform: rotate(15deg); display: inline-block;">E</span>
-        <span style="transform: rotate(20deg); display: inline-block;">O</span>
-        <span style="transform: rotate(25deg); display: inline-block;">X</span>
-        <span style="transform: rotate(30deg); display: inline-block;">o</span>
-        <span style="transform: rotate(35deg); display: inline-block;">x</span>
-        <span style="transform: rotate(40deg); display: inline-block;">☆</span>
-        <span style="transform: rotate(45deg); display: inline-block;">★</span>
-    </div>
-</div>
+        <div class="profile">
+            <img src="https://cdn.discordapp.com/attachments/1190964457040515072/1251854524012822609/IMG_20240423_125552_929.jpg?ex=667017e0&is=666ec660&hm=e01a59d6ec74f0061b9449b46350bca371b7f6d9cb725b11538c590a22a7e300&" alt="Profile Picture">
+            <div class="name-title">
+                <span style="transform: rotate(-15deg); display: inline-block;">★</span>
+                <span style="transform: rotate(-10deg); display: inline-block;">☆</span>
+                <span style="transform: rotate(-5deg); display: inline-block;">x</span>
+                <span style="transform: rotate(0deg); display: inline-block;">o</span>
+                <span style="transform: rotate(5deg); display: inline-block;">X</span>
+                <span style="transform: rotate(10deg); display: inline-block;">N</span>
+                <span style="transform: rotate(15deg); display: inline-block;">E</span>
+                <span style="transform: rotate(20deg); display: inline-block;">O</span>
+                <span style="transform: rotate(25deg); display: inline-block;">X</span>
+                <span style="transform: rotate(30deg); display: inline-block;">o</span>
+                <span style="transform: rotate(35deg); display: inline-block;">x</span>
+                <span style="transform: rotate(40deg); display: inline-block;">☆</span>
+                <span style="transform: rotate(45deg); display: inline-block;">★</span>
+            </div>
+        </div>
 
         <div class="section">
             <h2>Personal Information</h2>
@@ -146,7 +138,7 @@
             </ul>
         </div>
 
-        <div class="section" style="z-index: 4; margin-top: -40px;">
+        <div class="section" style="z-index: 4; margin-top: 20px;">
             <h2>Hobbies & Interests</h2>
             <ul>
                 <li>🎵 <strong>Listening to Music:</strong> Exploring various genres and discovering new tunes.</li>
