@@ -20,13 +20,13 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(5, auto);
-            gap: 40px; /* Increased gap to lower sections */
+            gap: 40px;
             max-width: 1000px;
             width: 100%;
             padding: 20px;
         }
         h1, h2 {
-            color: #9400D3; /* Dark Purple */
+            color: #9400D3;
             margin-top: 0;
             text-align: center;
             grid-column: span 2;
@@ -35,21 +35,24 @@
             position: relative;
             text-align: center;
             grid-column: span 2;
-            margin-bottom: -50px; /* Adjust as needed */
+            margin-bottom: -50px;
         }
         .profile img {
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
         }
         .name-title {
             position: absolute;
-            top: 100%;
+            top: 0;
             left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 2em;
-            color: #9400D3; /* Dark Purple */
+            transform: translateX(-50%);
+            font-size: 1.5em;
+            color: #9400D3;
             white-space: nowrap;
+            width: 100%;
+            text-align: center;
+            transform: translate(-50%, -100%);
         }
         ul {
             list-style: none;
@@ -59,7 +62,7 @@
             padding: 5px 0;
         }
         a {
-            color: #1a1aff; /* Dark Blue */
+            color: #1a1aff;
             text-decoration: none;
         }
         a:hover {
@@ -75,23 +78,23 @@
             z-index: 1;
         }
         .section:nth-child(odd) {
-            transform: translateX(-10%) translateY(20px); /* Increased translateY */
+            transform: translateX(-10%) translateY(20px);
             z-index: 2;
         }
         .section:nth-child(even) {
-            transform: translateX(10%) translateY(20px); /* Increased translateY */
+            transform: translateX(10%) translateY(20px);
         }
         .section:nth-child(1) {
             z-index: 3;
         }
         .section:nth-child(2) {
             z-index: 4;
-            margin-top: -40px; /* Adjusted margin-top */
+            margin-top: -40px;
         }
         .section.contact {
             grid-column: span 2;
             text-align: center;
-            transform: translateX(0) translateY(20px); /* Increased translateY */
+            transform: translateX(0) translateY(20px);
         }
         @media (max-width: 800px) {
             .container {
@@ -105,8 +108,8 @@
         .footer {
             grid-column: span 2;
             text-align: center;
-            color: #FFA500; /* Yellow/Orange color */
-            font-size: 1.2em; /* Make it a little bigger */
+            color: #FFA500;
+            font-size: 1.2em;
         }
     </style>
 </head>
