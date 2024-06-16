@@ -32,7 +32,7 @@
 - **Song 1:** [S&M](https://open.spotify.com/intl-de/track/0C4ejWmOTMv8vuYj85mf8m?si=3a02b7b2a39b49af)
 - **Song 2:** [Peachy](https://open.spotify.com/intl-de/track/5fYO3w0XpFZFLqNJkTnnl3?si=cd96d68f37154c9c)
 - **Song 3:** [Bow Down](https://open.spotify.com/intl-de/track/3jJTrW9rTO5V0RuLNmCp2h?si=971a0e7c3c574ca9)
-- **Song 4:** [CPR](https://open.spotify.com/intl-de/track/5Y0Fl1dx7zmMOD35v7LNhf?si=c792163a36154a41)
+- **Song 4:** [CPR](https://open.spotify.com/intl-de/track/5Y0Fl1dx7zmMOD35v7LNhf?si=67b84240006b4bfa)
 - **Song 5:** [Dirty Vibe](https://open.spotify.com/intl-de/track/5Y0Fl1dx7zmMOD35v7LNhf?si=c792163a36154a41)
 
 ---
