@@ -75,12 +75,60 @@ a:hover {
     color: #FFA500; /* Yellow/Orange color */
     font-size: 1.2em; /* Make it a little bigger */
 }
+.bubble {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    max-width: 300px;
+}
+.bubble:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.bubble-right {
+    grid-column: 2 / 3;
+    margin-left: -50px;
+}
+.bubble-right:before {
+    top: 50%;
+    left: -20px;
+    border-width: 10px 20px 10px 0;
+    border-color: transparent #fff transparent transparent;
+}
+.bubble-left {
+    grid-column: 1 / 2;
+    margin-right: -50px;
+}
+.bubble-left:before {
+    top: 50%;
+    right: -20px;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #fff;
+}
 @media (max-width: 800px) {
     .container {
         grid-template-columns: 1fr;
     }
     .section {
         grid-column: 1 / -1;
+    }
+    .bubble-right {
+        grid-column: 1 / -1;
+        margin-left: 0;
+    }
+    .bubble-left {
+        grid-column: 1 / -1;
+        margin-right: 0;
+    }
+    .bubble:before {
+        display: none;
     }
 }
 
