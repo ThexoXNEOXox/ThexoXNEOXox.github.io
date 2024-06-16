@@ -13,7 +13,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(5, auto);
-    gap: 40px; /* Increased gap to lower sections */
+    gap: 40px;
     max-width: 1000px;
     width: 100%;
     padding: 20px;
@@ -22,7 +22,7 @@ body {
     position: relative;
     text-align: center;
     grid-column: span 2;
-    margin-bottom: 50px; /* Adjust as needed */
+    margin-bottom: 50px; 
     margin-top: 50px; /* Adjust to position lower */
 }
 .profile img {
@@ -32,7 +32,7 @@ body {
 }
 .name-title {
     position: absolute;
-    top: -50px; /* Adjust to position the text correctly */
+    top: 160px; /* Adjust to position the text correctly */
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.5em;
@@ -40,22 +40,13 @@ body {
     white-space: nowrap;
     width: 100%;
     text-align: center;
+    padding: 0 10px;
 }
 .name-title span {
     display: inline-block;
     position: relative;
-    top: -10px; /* Adjust for bow shape */
-    transform: translateY(-10px); /* Adjust for bow shape */
+    transform: rotate(0deg);
 }
-.name-title span:nth-child(1) { left: -80px; }
-.name-title span:nth-child(2) { left: -60px; }
-.name-title span:nth-child(3) { left: -40px; }
-.name-title span:nth-child(4) { left: -20px; }
-.name-title span:nth-child(5) { left: 0; }
-.name-title span:nth-child(6) { left: 20px; }
-.name-title span:nth-child(7) { left: 40px; }
-.name-title span:nth-child(8) { left: 60px; }
-.name-title span:nth-child(9) { left: 80px; }
 ul {
     list-style: none;
     padding: 0;
@@ -113,4 +104,3 @@ a:hover {
     color: #FFA500; /* Yellow/Orange color */
     font-size: 1.2em; /* Make it a little bigger */
 }
-
