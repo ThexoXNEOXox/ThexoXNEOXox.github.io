@@ -46,10 +46,10 @@ body {
     position: relative;
     z-index: 1;
 }
-.section:nth-child(odd) {
+.section:nth-child(3) {
     grid-column: 1 / 2;
 }
-.section:nth-child(even) {
+.section:nth-child(4) {
     grid-column: 2 / 3;
 }
 .section.contact {
@@ -84,5 +84,3 @@ a:hover {
         grid-column: 1 / -1;
     }
 }
-
-
