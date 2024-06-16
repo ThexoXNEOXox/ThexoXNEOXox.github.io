@@ -7,22 +7,31 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 20px;
             background-color: #121212;
             color: #f4f4f4;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+            gap: 20px;
+            height: 100vh;
+            align-items: start;
         }
         .container {
-            max-width: 800px;
-            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 20px;
+            max-width: 100%;
+            margin: 0 auto;
             padding: 20px;
             background: #1e1e1e;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         h1, h2 {
-            text-align: center;
             color: #ff79c6;
+            margin-top: 0;
         }
         ul {
             list-style: none;
@@ -38,25 +47,25 @@
         a:hover {
             text-decoration: underline;
         }
-        .offset-left {
-            margin-left: 20px;
-        }
-        .offset-right {
-            margin-right: 20px;
-        }
         .section {
             padding: 20px;
+            background: #282a36;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
         .section:nth-child(odd) {
-            background: #282a36;
+            transform: translateX(-20px);
+        }
+        .section:nth-child(even) {
+            transform: translateX(20px);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>★☆ xoXNEOXox ☆★</h1>
+        <h1 style="grid-column: span 2; text-align: center;">★☆ xoXNEOXox ☆★</h1>
 
-        <div class="section offset-left">
+        <div class="section" style="grid-row: 1; grid-column: 1;">
             <h2>Personal Information</h2>
             <ul>
                 <li><strong>Name:</strong> Jay / JayJay</li>
@@ -68,7 +77,7 @@
             </ul>
         </div>
 
-        <div class="section offset-right">
+        <div class="section" style="grid-row: 2; grid-column: 2;">
             <h2>Hobbies & Interests</h2>
             <ul>
                 <li>🎵 <strong>Listening to Music:</strong> Exploring various genres and discovering new tunes.</li>
@@ -79,7 +88,7 @@
             </ul>
         </div>
 
-        <div class="section offset-left">
+        <div class="section" style="grid-row: 3; grid-column: 1;">
             <h2>Favorite Games</h2>
             <ul>
                 <li><strong>Game 1:</strong> <a href="http://store.steampowered.com/app/381210/Dead_by_Daylight/" target="_blank">Dead by Daylight</a></li>
@@ -90,7 +99,7 @@
             </ul>
         </div>
 
-        <div class="section offset-right">
+        <div class="section" style="grid-row: 4; grid-column: 2;">
             <h2>Favorite Songs</h2>
             <ul>
                 <li><strong>Song 1:</strong> <a href="https://open.spotify.com/intl-de/track/0C4ejWmOTMv8vuYj85mf8m?si=3a02b7b2a39b49af" target="_blank">S&M</a></li>
@@ -101,7 +110,7 @@
             </ul>
         </div>
 
-        <div class="section offset-left">
+        <div class="section" style="grid-row: 5; grid-column: 1;">
             <h2>Contact & Social</h2>
             <ul>
                 <li>🎮 <strong>Gaming Platforms:</strong> <a href="https://steamcommunity.com/id/ThexoXNEOXox/" target="_blank">Steam</a></li>
@@ -109,7 +118,8 @@
             </ul>
         </div>
 
-        <p>Stay connected and let's conquer the world together! 🌟</p>
+        <p style="grid-column: span 2; text-align: center;">Stay connected and let's conquer the world together! 🌟</p>
     </div>
 </body>
 </html>
+
