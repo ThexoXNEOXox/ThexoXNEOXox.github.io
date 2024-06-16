@@ -10,7 +10,7 @@
             margin: 0;
             padding: 20px;
             background-color: #121212;
-            color: #f4f4f4;
+            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -23,12 +23,10 @@
             gap: 20px;
             max-width: 1000px;
             width: 100%;
-            background: #1e1e1e;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         h1, h2 {
-            color: #ff79c6;
+            color: #9400D3; /* Dark Purple */
             margin-top: 0;
             text-align: center;
             grid-column: span 2;
@@ -48,23 +46,37 @@
             text-decoration: underline;
         }
         .section {
-            background: #282a36;
+            background: #fff;
+            color: #333;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
         }
         .section:nth-child(odd) {
-            transform: translateX(-10%);
+            transform: translateX(-10%) translateY(-10px);
+            z-index: 2;
         }
         .section:nth-child(even) {
-            transform: translateX(10%);
+            transform: translateX(10%) translateY(10px);
+        }
+        .section:nth-child(1) {
+            z-index: 3;
+        }
+        .section:nth-child(2) {
+            z-index: 2;
+        }
+        .section:nth-child(3) {
+            z-index: 1;
         }
         @media (max-width: 800px) {
             .container {
                 grid-template-columns: 1fr;
             }
             .section {
-                transform: translateX(0);
+                transform: translateX(0) translateY(0);
+                z-index: 1;
             }
         }
     </style>
@@ -128,5 +140,8 @@
 
         <p style="grid-column: span 2; text-align: center;">Stay connected and let's conquer the world together! 🌟</p>
     </div>
+</body>
+</html>
+
 </body>
 </html>
