@@ -22,8 +22,8 @@ body {
     position: relative;
     text-align: center;
     grid-column: span 2;
-    margin-bottom: 10px; 
-    margin-top: 100px; /* Adjust to position lower */
+    margin-top: 50px; /* Position profile picture lower */
+    margin-bottom: 10px;
 }
 .profile img {
     border-radius: 50%;
@@ -36,8 +36,8 @@ body {
     color: #9400D3; /* Dark Purple */
     text-align: center;
     width: 100%;
-    margin-top: -20px; /* Adjust to position closer to the image */
-    margin-bottom: 30px; /* Space between name and info boxes */
+    margin-top: 20px; /* Space between profile picture and name */
+    margin-bottom: 20px; /* Space between name and info boxes */
 }
 ul {
     list-style: none;
