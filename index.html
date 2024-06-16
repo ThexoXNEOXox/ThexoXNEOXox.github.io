@@ -31,6 +31,25 @@
             text-align: center;
             grid-column: span 2;
         }
+        .profile {
+            position: relative;
+            text-align: center;
+            grid-column: span 2;
+            margin-bottom: -50px; /* Adjust as needed */
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .name-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            white-space: nowrap;
+        }
         ul {
             list-style: none;
             padding: 0;
@@ -92,7 +111,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>★☆ xoXNEOXox ☆★</h1>
+        <div class="profile">
+            <img src="https://github.com/your-username.png" alt="Profile Picture">
+            <div class="name-title">★☆ xoXNEOXox ☆★</div>
+        </div>
 
         <div class="section">
             <h2>Personal Information</h2>
