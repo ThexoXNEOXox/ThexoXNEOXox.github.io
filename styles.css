@@ -58,11 +58,6 @@ body {
 .section ul li strong {
     color: #FF69B4; /* Overpoint color */
 }
-.section ul li::after {
-    content: ':';
-    color: #FF69B4;
-    padding-right: 5px;
-}
 .section ul li span {
     color: #FFFFFF; /* Text behind the colon */
 }
@@ -122,4 +117,5 @@ a:hover {
         grid-column: 1 / -1;
     }
 }
+
 
