@@ -78,14 +78,19 @@ a:hover {
 .bubble {
     background: #fff;
     color: #FFA500; /* Orange color */
-    padding: 20px;
+    padding: 40px 20px; /* Increase padding */
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 2;
-    max-width: 300px;
+    max-width: 400px; /* Increase max-width */
     text-align: center;
     margin: 20px auto; /* Center the bubble */
+    font-size: 1.2em; /* Increase font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px; /* Set minimum height */
 }
 @media (max-width: 800px) {
     .container {
@@ -95,4 +100,5 @@ a:hover {
         grid-column: 1 / -1;
     }
 }
+
 
