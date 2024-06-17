@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Dancing+Script:wght@600&family=Roboto:wght@400&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #121212;
@@ -37,6 +37,7 @@ body {
     text-align: center;
     margin-top: 10px; /* Space between profile picture and name */
     margin-bottom: 20px; /* Space between name and info sections */
+    font-family: 'Cinzel', serif; /* Epic font */
 }
 .section {
     background: #fff;
@@ -46,6 +47,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 1;
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
 }
 .section:nth-child(3) {
     grid-column: 1 / 2;
@@ -103,4 +105,5 @@ a:hover {
         grid-column: 1 / -1;
     }
 }
+
 
