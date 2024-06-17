@@ -40,14 +40,20 @@ body {
     font-family: 'Cinzel', serif; /* Epic font */
 }
 .section {
-    background: #fff;
-    color: #333;
+    background: #ADD8E6; /* Baby Blue background */
+    color: #333; /* Default text color */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 1;
     font-family: 'Roboto', sans-serif; /* Clean and modern font */
+}
+.section h2 {
+    color: #333; /* Section title color */
+}
+.section ul li {
+    color: #333; /* List item color */
 }
 .section:nth-child(3) {
     grid-column: 1 / 2;
@@ -80,7 +86,7 @@ a:hover {
     font-size: 1.2em; /* Make it a little bigger */
 }
 .bubble {
-    background: #fff;
+    background: #ADD8E6; /* Baby Blue background */
     color: #FFA500; /* Orange color */
     padding: 40px 20px; /* Increase padding */
     border-radius: 50px;
