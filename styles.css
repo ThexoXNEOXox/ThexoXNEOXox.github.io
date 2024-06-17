@@ -73,7 +73,7 @@ ul li {
     padding: 5px 0;
 }
 a {
-    color: #1a1aff; /* Dark Blue */
+    color: #FFFFFF; /* White */
     text-decoration: none;
 }
 a:hover {
@@ -87,7 +87,7 @@ a:hover {
 }
 .bubble {
     background: #87CEFA; /* Sky Blue background */
-    color: #FF69B4; /* Fancy Pink color */
+    color: #FFA500; /* Orange color */
     padding: 40px 20px; /* Increase padding */
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
