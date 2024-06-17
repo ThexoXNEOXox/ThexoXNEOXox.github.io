@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -86,7 +88,8 @@ a:hover {
     max-width: 400px; /* Increase max-width */
     text-align: center;
     margin: 20px auto; /* Center the bubble */
-    font-size: 1.2em; /* Increase font size */
+    font-size: 1.5em; /* Increase font size */
+    font-family: 'Dancing Script', cursive; /* Fancy font */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,5 +103,4 @@ a:hover {
         grid-column: 1 / -1;
     }
 }
-
 
