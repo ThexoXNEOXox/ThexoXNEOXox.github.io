@@ -172,3 +172,76 @@ footer {
   position: relative;
   z-index: 2;
 }
+
+/* ===== Favorite Games Card Custom Layout ===== */
+
+/* Moves the card slightly top-left */
+.card-games {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 380px;
+  max-width: none;
+  text-align: left;
+  transform: rotate(-1deg);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+/* Game List Styling */
+.game-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.game-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(40, 40, 60, 0.5);
+  border-radius: 10px;
+  padding: 8px 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-list li:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+/* Game Images */
+.game-list img {
+  width: 48px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+}
+
+/* Top Game (Dead by Daylight) Special Style */
+.top-game {
+  background: linear-gradient(135deg, rgba(255,0,255,0.25), rgba(0,255,255,0.25));
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4), 0 0 40px rgba(0, 255, 255, 0.3);
+  transform: scale(1.1);
+  padding: 12px 16px;
+}
+
+.top-game img {
+  width: 64px;
+}
+
+.top-game a {
+  font-size: 1.3rem;
+  color: #fff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+}
+
+.playtime {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin: 4px 0 0 0;
+  text-shadow: 0 0 5px #00ffff60;
+}
