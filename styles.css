@@ -1,174 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Quicksand:wght@400;600&display=swap');
 
-/* ----- General Body ----- */
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
   font-family: 'Quicksand', sans-serif;
-  background: #000; /* fallback black */
+  background: #000;
   color: #eee;
   overflow-x: hidden;
-  position: relative;
 }
 
-/* ----- Multi-Layer CSS Galaxy ----- */
-body::before,
-body::after {
-  content: '';
+/* Stars Layer */
+.stars {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  background: transparent;
-}
-
-/* nebula layers with gradients + stars */
-body::before {
-  background: radial-gradient(circle at 30% 40%, #330033 0%, transparent 80%),
-              radial-gradient(circle at 70% 20%, #220055 0%, transparent 80%),
-              radial-gradient(circle at 50% 80%, #550077 0%, transparent 80%);
+  z-index: 0; pointer-events: none;
   box-shadow:
-    /* white sparkling stars */
-    5vw 10vh #fff, 15vw 40vh #fff, 25vw 20vh #fff, 35vw 80vh #fff,
-    45vw 30vh #fff, 55vw 60vh #fff, 65vw 10vh #fff, 75vw 50vh #fff,
-    85vw 20vh #fff, 95vw 70vh #fff, 50vw 90vh #fff, 20vw 60vh #fff,
-    12vw 12vh #fff, 22vw 25vh #fff, 42vw 33vh #fff, 62vw 45vh #fff,
-    82vw 55vh #fff, 92vw 65vh #fff, 72vw 75vh #fff, 52vw 85vh #fff;
-  animation: twinkle1 8s infinite alternate;
-}
-
-body::after {
-  background: radial-gradient(circle at 20% 70%, #003366 0%, transparent 80%),
-              radial-gradient(circle at 80% 60%, #6600cc 0%, transparent 80%),
-              radial-gradient(circle at 60% 30%, #cc33ff 0%, transparent 80%);
-  box-shadow:
-    10vw 30vh #fff, 20vw 70vh #fff, 30vw 40vh #fff, 40vw 10vh #fff,
-    50vw 50vh #fff, 60vw 20vh #fff, 70vw 60vh #fff, 80vw 80vh #fff,
-    90vw 30vh #fff, 25vw 85vh #fff, 75vw 15vh #fff, 55vw 40vh #fff,
-    5vw 15vh #fff, 35vw 60vh #fff, 65vw 20vh #fff, 85vw 70vh #fff;
-  animation: twinkle2 10s infinite alternate-reverse;
-}
-
-/* ----- Twinkle Animations ----- */
-@keyframes twinkle1 {
-  0% { opacity: 0.3; }
-  50% { opacity: 0.8; }
-  100% { opacity: 0.3; }
-}
-
-@keyframes twinkle2 {
-  0% { opacity: 0.3; }
-  50% { opacity: 0.8; }
-  100% { opacity: 0.3; }
-}
-
-/* ----- Optional Floating Particles ----- */
-.particle {
-  position: fixed;
-  width: 2px; height: 2px;
-  background: #ff66ff;
-  border-radius: 50%;
+    5vw 10vh #fff, 15vw 40vh #fff, 25vw 20vh #fff,
+    35vw 80vh #fff, 45vw 30vh #fff, 55vw 60vh #fff;
   opacity: 0.7;
-  animation: float 6s infinite alternate;
+  animation: twinkle 6s infinite alternate;
 }
 
-@keyframes float {
-  0% { transform: translateY(0) translateX(0); opacity: 0.7; }
-  50% { transform: translateY(-20px) translateX(10px); opacity: 1; }
-  100% { transform: translateY(0) translateX(0); opacity: 0.7; }
+@keyframes twinkle {
+  0% { opacity: 0.3; } 50% { opacity: 1; } 100% { opacity: 0.3; }
 }
 
-/* ----- Header ----- */
-header {
-  text-align: center;
-  margin-top: 80px;
+/* Nebula Sphere */
+.nebula-sphere {
+  position: fixed;
+  top: 25%; left: 50%;
+  width: 200px; height: 200px;
+  margin-left: -100px; margin-top: -100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #6633ff 0%, transparent 70%);
+  box-shadow: 0 0 50px #6633ff80;
+  z-index: 0; pointer-events: none;
+}
+
+/* Header */
+header { text-align: center; margin-top: 80px; z-index:2; position:relative; }
+h1 { font-family: 'Orbitron', sans-serif; color: #ff00ff; text-shadow:0 0 20px #ff00ff,0 0 40px #8000ff; font-size:2.8rem; margin-bottom:10px; }
+.subtitle { color:#aaa; font-style:italic; text-shadow:0 0 5px #00ffff80; margin-top:5px; }
+
+/* Cube Container */
+.cube-container {
+  width: 400px; height: 400px;
+  perspective: 1200px;
+  margin: 100px auto;
+  position: relative; z-index:2;
+}
+
+.cube {
+  width: 100%; height: 100%;
   position: relative;
-  z-index: 2;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
 }
 
-h1 {
-  font-family: 'Orbitron', sans-serif;
-  color: #ff00ff;
-  text-shadow: 0 0 20px #ff00ff, 0 0 40px #8000ff;
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+.face {
+  position: absolute; width: 100%; height: 100%;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  backface-visibility: hidden;
+  border-radius: 20px; background: rgba(20,20,30,0.65);
+  border:1px solid rgba(255,255,255,0.1); box-shadow:0 0 25px rgba(0,255,255,0.15); backdrop-filter:blur(8px);
+  padding:25px 30px; box-sizing:border-box;
 }
 
-.subtitle {
-  color: #aaa;
-  font-style: italic;
-  text-shadow: 0 0 5px #00ffff80;
-  margin-top: 5px;
-}
+/* Cube faces positions */
+.face1 { transform: rotateY(0deg) translateZ(200px); }
+.face2 { transform: rotateY(90deg) translateZ(200px); }
+.face3 { transform: rotateY(180deg) translateZ(200px); }
+.face4 { transform: rotateY(270deg) translateZ(200px); }
+.face5 { transform: rotateX(90deg) translateZ(200px); }
 
-/* ----- Main Content ----- */
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  padding: 60px 10px 100px;
-  position: relative;
-  z-index: 2;
-}
+/* Card content */
+h2 { font-family:'Orbitron', sans-serif; color:#00ffff; text-shadow:0 0 10px #00ffff,0 0 20px #0088ff; text-align:center; margin-bottom:15px; }
+p, li { font-size:1rem; line-height:1.5em; text-align:center; }
+ul { list-style:none; padding:0; }
+a { color:#ff66ff; text-decoration:none; transition:0.2s; }
+a:hover { text-shadow:0 0 8px #ff66ff; }
 
-/* ----- Neon Glass Cards ----- */
-.card {
-  background: rgba(20, 20, 30, 0.65);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  padding: 25px 40px;
-  width: 80%;
-  max-width: 800px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 30px rgba(255, 0, 255, 0.4), 0 0 60px rgba(0, 255, 255, 0.3);
-}
-
-/* Card Titles */
-h2 {
-  font-family: 'Orbitron', sans-serif;
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #0088ff;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Paragraphs & Lists */
-p, li {
-  font-size: 1.05rem;
-  line-height: 1.6em;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-/* Links */
-a {
-  color: #ff66ff;
-  text-decoration: none;
-  transition: color 0.2s, text-shadow 0.2s;
-}
-
-a:hover {
-  color: #fff;
-  text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
-}
-
-/* ----- Footer ----- */
-footer {
-  text-align: center;
-  color: #888;
-  padding-bottom: 50px;
-  text-shadow: 0 0 5px #ff00ff40;
-  position: relative;
-  z-index: 2;
-}
+/* Footer */
+footer { text-align:center; color:#888; padding:50px 0; text-shadow:0 0 5px #ff00ff40; z-index:2; position:relative; }
