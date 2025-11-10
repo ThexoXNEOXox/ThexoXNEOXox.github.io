@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Quicksand:wght@400;600&display=swap');
 
-/* ----- General Body ----- */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Quicksand', sans-serif;
-  background: #000;
+  background: #000; /* solid black */
   color: #eee;
   overflow-x: hidden;
   position: relative;
 }
 
-/* ----- CSS-only stars ----- */
+/* CSS-only stars */
 body::before, body::after {
   content: '';
   position: fixed;
@@ -19,32 +18,39 @@ body::before, body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
   pointer-events: none;
-  background: transparent;
-  box-shadow: 
-    20vw 10vh #fff, 50vw 80vh #fff, 70vw 40vh #fff,
-    90vw 60vh #fff, 30vw 90vh #fff, 10vw 20vh #fff,
-    60vw 30vh #fff, 80vw 10vh #fff, 40vw 70vh #fff,
-    15vw 50vh #fff, 25vw 25vh #fff, 75vw 75vh #fff;
-  animation: twinkle 6s infinite alternate;
+  z-index: 0;
+}
+
+body::before {
+  box-shadow:
+    5vw 10vh #fff, 15vw 40vh #fff, 25vw 20vh #fff, 35vw 80vh #fff,
+    45vw 30vh #fff, 55vw 60vh #fff, 65vw 10vh #fff, 75vw 50vh #fff,
+    85vw 20vh #fff, 95vw 70vh #fff, 50vw 90vh #fff, 20vw 60vh #fff;
+  animation: twinkle1 6s infinite alternate;
 }
 
 body::after {
-  box-shadow: 
-    10vw 30vh #fff, 55vw 20vh #fff, 35vw 60vh #fff,
-    85vw 50vh #fff, 65vw 85vh #fff, 5vw 75vh #fff,
-    45vw 35vh #fff, 15vw 15vh #fff, 95vw 95vh #fff;
-  animation: twinkle 8s infinite alternate-reverse;
+  box-shadow:
+    10vw 30vh #fff, 20vw 70vh #fff, 30vw 40vh #fff, 40vw 10vh #fff,
+    50vw 50vh #fff, 60vw 20vh #fff, 70vw 60vh #fff, 80vw 80vh #fff,
+    90vw 30vh #fff, 25vw 85vh #fff, 75vw 15vh #fff, 55vw 40vh #fff;
+  animation: twinkle2 8s infinite alternate-reverse;
 }
 
-@keyframes twinkle {
+@keyframes twinkle1 {
   0% {opacity: 0.3;}
   50% {opacity: 0.8;}
   100% {opacity: 0.3;}
 }
 
-/* ----- Header ----- */
+@keyframes twinkle2 {
+  0% {opacity: 0.3;}
+  50% {opacity: 0.8;}
+  100% {opacity: 0.3;}
+}
+
+/* Header */
 header {
   text-align: center;
   margin-top: 80px;
@@ -67,7 +73,7 @@ h1 {
   margin-top: 5px;
 }
 
-/* ----- Main Content ----- */
+/* Main */
 main {
   display: flex;
   flex-direction: column;
@@ -78,6 +84,7 @@ main {
   z-index: 2;
 }
 
+/* Neon cards */
 .card {
   background: rgba(20, 20, 30, 0.65);
   border-radius: 20px;
@@ -124,7 +131,7 @@ a:hover {
   text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
 }
 
-/* ----- Footer ----- */
+/* Footer */
 footer {
   text-align: center;
   color: #888;
