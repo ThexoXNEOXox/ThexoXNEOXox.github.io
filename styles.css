@@ -1,121 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Dancing+Script:wght@600&family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Quicksand:wght@400;600&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #121212;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #090909, #000);
+  color: #eee;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
 }
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 1000px;
-    width: 100%;
-    padding: 20px;
+
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.3rem;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 25px #8000ff;
+  margin-top: 40px;
 }
-.profile {
-    position: relative;
-    text-align: center;
-    grid-column: span 2;
-    margin-top: 50px;
+
+h3 {
+  font-size: 1.3rem;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+  margin-top: 50px;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+  letter-spacing: 1px;
 }
-.profile img {
-    border-radius: 50%;
-    width: 250px; /* Increase size */
-    height: 250px; /* Increase size */
-}
-.name-title {
-    grid-column: span 2;
-    font-size: 2.5em;
-    color: #9400D3; /* Dark Purple */
-    text-align: center;
-    margin-top: 10px; /* Space between profile picture and name */
-    margin-bottom: 20px; /* Space between name and info sections */
-    font-family: 'Cinzel', serif; /* Epic font */
-}
+
 .section {
-    background: #87CEFA; /* Sky Blue background */
-    color: #FF69B4; /* Fancy Pink color */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 1;
-    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  background: rgba(20, 20, 20, 0.6);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
 }
-.section h2 {
-    color: #FF69B4; /* Section title color */
+
+.item {
+  margin: 8px 0;
+  font-size: 1rem;
+  line-height: 1.6;
 }
-.section ul li {
-    color: #FF69B4; /* List item color */
-}
-.section ul li strong {
-    color: #FF69B4; /* Overpoint color */
-}
-.section ul li span {
-    color: #FFFFFF; /* Text behind the colon */
-}
-.section:nth-child(3) {
-    grid-column: 1 / 2;
-}
-.section:nth-child(4) {
-    grid-column: 2 / 3;
-}
-.section.contact {
-    grid-column: span 2;
-    text-align: center;
-}
-ul {
-    list-style: none;
-    padding: 0;
-}
-ul li {
-    padding: 5px 0;
-}
+
 a {
-    color: #FFFFFF; /* White */
-    text-decoration: none;
+  color: #ff66ff;
+  text-decoration: none;
+  transition: 0.2s;
 }
 a:hover {
-    text-decoration: underline;
+  text-shadow: 0 0 8px #ff99ff;
 }
+
+.divider {
+  width: 90%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #555, transparent);
+  margin: 30px auto;
+}
+
 .footer {
-    grid-column: span 2;
-    text-align: center;
-    color: #FFA500; /* Yellow/Orange color */
-    font-size: 1.2em; /* Make it a little bigger */
+  margin: 50px 0;
+  color: #888;
+  font-size: 0.9rem;
 }
-.bubble {
-    background: #87CEFA; /* Sky Blue background */
-    color: #FFA500; /* Orange color */
-    padding: 40px 20px; /* Increase padding */
-    border-radius: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 2;
-    max-width: 400px; /* Increase max-width */
-    text-align: center;
-    margin: 20px auto; /* Center the bubble */
-    font-size: 1.5em; /* Increase font size */
-    font-family: 'Dancing Script', cursive; /* Fancy font */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 150px; /* Set minimum height */
+
+.neon-border {
+  border: 1px solid #333;
+  box-shadow: 0 0 10px #00ffff40, 0 0 20px #ff00ff30 inset;
+  padding: 20px;
+  border-radius: 10px;
 }
-@media (max-width: 800px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-    .section {
-        grid-column: 1 / -1;
-    }
+
+/* Optional: neon animation glow */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px #ff00ff60, 0 0 20px #00ffff40 inset;
+  }
+  50% {
+    box-shadow: 0 0 20px #00ffff90, 0 0 30px #ff00ff60 inset;
+  }
+}
+
+.neon-border:hover {
+  animation: neonPulse 1.8s infinite alternate;
 }
 
 
