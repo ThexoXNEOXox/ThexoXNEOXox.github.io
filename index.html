@@ -38,14 +38,14 @@
     </section>
 
     <!-- ✦ Games ✦ -->
-    <div class="card card-games">
+    <div class="card card-games" id="favorite-games">
   <h2>✦ Favorite Games ✦</h2>
   <ul class="game-list">
     <li class="top-game">
       <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/381210/capsule_184x69.jpg" alt="Dead by Daylight">
       <div>
         <a href="https://store.steampowered.com/app/381210/Dead_by_Daylight/">Dead by Daylight</a>
-        <p class="playtime">Playtime: ~420 hours</p>
+        <p class="playtime">Playtime: <span id="dbd-playtime">Loading...</span></p>
       </div>
     </li>
     <li>
@@ -67,6 +67,22 @@
   </ul>
 </div>
 
+<script>
+  async function loadPlaytime() {
+    const steamId = '76561198296089984'; // your SteamID
+    const apiKey = 'YOUR_STEAM_API_KEY'; // insert your key here
+    const response = await fetch(`https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=${apiKey}&steamid=${steamId}&include_appinfo=true`);
+    const data = await response.json();
+    const dbd = data.response.games.find(g => g.appid === 381210);
+    if (dbd) {
+      const hours = Math.floor(dbd.playtime_forever / 60);
+      document.getElementById('dbd-playtime').innerText = `${hours} hours`;
+    } else {
+      document.getElementById('dbd-playtime').innerText = 'Not found';
+    }
+  }
+  loadPlaytime();
+</script>
     <!-- ✦ Songs ✦ -->
     <section class="card">
       <h2>✦ Favorite Songs ✦</h2>
