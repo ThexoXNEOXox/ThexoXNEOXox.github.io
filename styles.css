@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Quicksand:wght@400;600&display=swap');
 
+/* ----- General Body ----- */
 body {
   margin: 0;
   padding: 0;
@@ -7,41 +8,43 @@ body {
   background: #000;
   color: #eee;
   overflow-x: hidden;
+  position: relative;
 }
 
-/* ✨ Moving Galaxy Background */
-.stars, .twinkling {
+/* ----- CSS-only stars ----- */
+body::before, body::after {
+  content: '';
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: block;
   z-index: 0;
+  pointer-events: none;
+  background: transparent;
+  box-shadow: 
+    20vw 10vh #fff, 50vw 80vh #fff, 70vw 40vh #fff,
+    90vw 60vh #fff, 30vw 90vh #fff, 10vw 20vh #fff,
+    60vw 30vh #fff, 80vw 10vh #fff, 40vw 70vh #fff,
+    15vw 50vh #fff, 25vw 25vh #fff, 75vw 75vh #fff;
+  animation: twinkle 6s infinite alternate;
 }
 
-.stars {
-  background: url('https://i.imgur.com/YKY28eT.png') repeat;
-  animation: moveStars 200s linear infinite;
+body::after {
+  box-shadow: 
+    10vw 30vh #fff, 55vw 20vh #fff, 35vw 60vh #fff,
+    85vw 50vh #fff, 65vw 85vh #fff, 5vw 75vh #fff,
+    45vw 35vh #fff, 15vw 15vh #fff, 95vw 95vh #fff;
+  animation: twinkle 8s infinite alternate-reverse;
 }
 
-.twinkling {
-  background: url('https://i.imgur.com/XYMF4wb.png') repeat;
-  animation: moveTwink 250s linear infinite;
-  opacity: 0.7;
+@keyframes twinkle {
+  0% {opacity: 0.3;}
+  50% {opacity: 0.8;}
+  100% {opacity: 0.3;}
 }
 
-@keyframes moveStars {
-  from { background-position: 0 0; }
-  to { background-position: -10000px 5000px; }
-}
-
-@keyframes moveTwink {
-  from { background-position: 0 0; }
-  to { background-position: 10000px -5000px; }
-}
-
-/* ✦ General Layout ✦ */
+/* ----- Header ----- */
 header {
   text-align: center;
   margin-top: 80px;
@@ -64,6 +67,7 @@ h1 {
   margin-top: 5px;
 }
 
+/* ----- Main Content ----- */
 main {
   display: flex;
   flex-direction: column;
@@ -120,7 +124,7 @@ a:hover {
   text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
 }
 
-/* ✦ Footer ✦ */
+/* ----- Footer ----- */
 footer {
   text-align: center;
   color: #888;
