@@ -173,59 +173,60 @@ footer {
   z-index: 2;
 }
 
-/* ---- Favorite Games Card Placement ---- */
-#fav-games {
+/* ----- Favorite Games Card (Top Left Placement) ----- */
+#favorite-games {
   position: absolute;
-  top: 10%;
+  top: 8%;
   left: 6%;
-  width: 300px;
-  z-index: 3;
+  width: 420px;
   transform: rotate(-2deg);
+  background: rgba(30, 10, 40, 0.7);
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
 }
 
-#fav-games .game {
+/* Game List */
+.game-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.game-list li {
   display: flex;
   align-items: center;
-  margin: 10px 0;
-  background: rgba(30, 30, 50, 0.6);
-  border-radius: 12px;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
   padding: 10px 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.3s;
 }
 
-#fav-games .game:hover {
+.game-list li:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
 }
 
-#fav-games .game img {
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
-  margin-right: 12px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-#fav-games .game-title {
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 0 6px #ff00ff;
-}
-
-#fav-games .playtime {
-  font-size: 0.85rem;
-  color: #aaa;
-}
-
-/* Special highlight for Top 1 game */
-#fav-games .top1 {
-  background: rgba(60, 10, 80, 0.9);
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
-  border: 2px solid rgba(255, 0, 255, 0.6);
-  transform: scale(1.1);
-}
-#fav-games .top1 img {
-  width: 48px;
-  height: 48px;
+/* Top Game Highlight */
+.top-game {
   border: 2px solid #ff00ff;
+  background: rgba(255, 0, 255, 0.1);
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.4);
+}
+
+/* Game Icons */
+.game-list img {
+  width: 64px;
+  height: 24px;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(255, 0, 255, 0.2);
+}
+
+/* Playtime */
+.playtime {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 4px;
+  text-shadow: 0 0 5px #ff00ff80;
 }
