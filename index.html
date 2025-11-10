@@ -1,186 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>★☆ xoXNEOXox ☆★</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #121212;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(5, auto);
-            gap: 40px;
-            max-width: 1000px;
-            width: 100%;
-            padding: 20px;
-        }
-        .profile {
-            position: relative;
-            text-align: center;
-            grid-column: span 2;
-            margin-bottom: 50px;
-        }
-        .profile img {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-        }
-        .name-title {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.5em;
-            color: #9400D3;
-            white-space: nowrap;
-            text-align: center;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            padding: 5px 0;
-        }
-        a {
-            color: #1a1aff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .section {
-            background: #fff;
-            color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            position: relative;
-            z-index: 1;
-        }
-        .section:nth-child(odd) {
-            transform: translateX(-10%) translateY(40px);
-            z-index: 2;
-        }
-        .section:nth-child(even) {
-            transform: translateX(10%) translateY(40px);
-        }
-        .section:nth-child(1) {
-            z-index: 3;
-        }
-        .section:nth-child(2) {
-            z-index: 4;
-            margin-top: 20px;
-        }
-        .section.contact {
-            grid-column: span 2;
-            text-align: center;
-            transform: translateX(0) translateY(40px);
-        }
-        @media (max-width: 800px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .section {
-                transform: translateX(0) translateY(0);
-                z-index: 1;
-            }
-        }
-        .footer {
-            grid-column: span 2;
-            text-align: center;
-            color: #FFA500;
-            font-size: 1.2em;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>★☆ SinisterBoy ☆★</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Quicksand:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #090909, #000);
+      color: #eee;
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.3rem;
+      color: #ff00ff;
+      text-shadow: 0 0 10px #ff00ff, 0 0 25px #8000ff;
+      margin-top: 40px;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      color: #00ffff;
+      text-shadow: 0 0 8px #00ffff;
+      margin-top: 50px;
+      border-top: 1px solid #222;
+      padding-top: 20px;
+      letter-spacing: 1px;
+    }
+
+    .section {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      background: rgba(20, 20, 20, 0.6);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+    }
+
+    .item {
+      margin: 8px 0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #ff66ff;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    a:hover {
+      text-shadow: 0 0 8px #ff99ff;
+    }
+
+    .divider {
+      width: 90%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #555, transparent);
+      margin: 30px auto;
+    }
+
+    .footer {
+      margin: 50px 0;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .neon-border {
+      border: 1px solid #333;
+      box-shadow: 0 0 10px #00ffff40, 0 0 20px #ff00ff30 inset;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile">
-            <img src="https://cdn.discordapp.com/attachments/1190964457040515072/1251854524012822609/IMG_20240423_125552_929.jpg?ex=667017e0&is=666ec660&hm=e01a59d6ec74f0061b9449b46350bca371b7f6d9cb725b11538c590a22a7e300&" alt="Profile Picture">
-            <div class="name-title">
-                <span style="transform: rotate(-15deg); display: inline-block;">★</span>
-                <span style="transform: rotate(-10deg); display: inline-block;">☆</span>
-                <span style="transform: rotate(-5deg); display: inline-block;">x</span>
-                <span style="transform: rotate(0deg); display: inline-block;">o</span>
-                <span style="transform: rotate(5deg); display: inline-block;">X</span>
-                <span style="transform: rotate(10deg); display: inline-block;">N</span>
-                <span style="transform: rotate(15deg); display: inline-block;">E</span>
-                <span style="transform: rotate(20deg); display: inline-block;">O</span>
-                <span style="transform: rotate(25deg); display: inline-block;">X</span>
-                <span style="transform: rotate(30deg); display: inline-block;">o</span>
-                <span style="transform: rotate(35deg); display: inline-block;">x</span>
-                <span style="transform: rotate(40deg); display: inline-block;">☆</span>
-                <span style="transform: rotate(45deg); display: inline-block;">★</span>
-            </div>
-        </div>
+  <h2>★☆ SinisterBoy ☆★</h2>
 
-        <div class="section">
-            <h2>Personal Information</h2>
-            <ul>
-                <li><strong>Name:</strong> Jay / JayJay</li>
-                <li><strong>Age:</strong> 18</li>
-                <li><strong>Birthday:</strong> December 20th</li>
-                <li><strong>Pronouns:</strong> He/Them</li>
-                <li><strong>Relationship Status:</strong> Single</li>
-                <li><strong>Gaming Alias:</strong> ★☆FemBoyLover☆★</li>
-            </ul>
-        </div>
+  <div class="section neon-border">
+    <h3>✦ Personal Information ✦</h3>
+    <p class="item">✧ <b>Name:</b> Jay / JayJay (Justin)</p>
+    <p class="item">✧ <b>Age:</b> 19</p>
+    <p class="item">✧ <b>Birthday:</b> December 20th</p>
+    <p class="item">✧ <b>Pronouns:</b> He/Them</p>
+    <p class="item">✧ <b>Relationship Status:</b> Heart belongs to someone 💞</p>
+    <p class="item">✧ <b>Gaming Alias:</b> ★☆SinisterBoy☆★</p>
+  </div>
 
-        <div class="section" style="z-index: 4; margin-top: 20px;">
-            <h2>Hobbies & Interests</h2>
-            <ul>
-                <li>🎵 <strong>Listening to Music:</strong> Exploring various genres and discovering new tunes.</li>
-                <li>📚 <strong>Reading Mangas/Books:</strong> Diving into captivating stories and adventures.</li>
-                <li>🏃 <strong>Sport:</strong> Staying active and fit through different physical activities.</li>
-                <li>🎭 <strong>Roleplay:</strong> Engaging in imaginative and immersive role-playing scenarios.</li>
-                <li>🎨 <strong>Drawing:</strong> Creating art and expressing creativity through illustrations.</li>
-            </ul>
-        </div>
+  <div class="divider"></div>
 
-        <div class="section">
-            <h2>Favorite Games</h2>
-            <ul>
-                <li><strong>Game 1:</strong> <a href="http://store.steampowered.com/app/381210/Dead_by_Daylight/" target="_blank">Dead by Daylight</a></li>
-                <li><strong>Game 2:</strong> <a href="https://store.steampowered.com/app/1326470/Sons_Of_The_Forest/" target="_blank">Sons of the Forest</a></li>
-                <li><strong>Game 3:</strong> <a href="https://store.steampowered.com/app/397540/Borderlands_3/" target="_blank">Borderlands 3</a></li>
-                <li><strong>Game 4:</strong> <a href="http://example.com" target="_blank">PLACEHOLDER</a></li>
-                <li><strong>Game 5:</strong> <a href="http://example.com" target="_blank">PLACEHOLDER</a></li>
-            </ul>
-        </div>
+  <div class="section neon-border">
+    <h3>✦ Hobbies & Interests ✦</h3>
+    <p class="item">🎵 <b>Listening to Music:</b> Exploring various genres and discovering new tunes.</p>
+    <p class="item">📚 <b>Reading Mangas/Books:</b> Diving into captivating stories and adventures.</p>
+    <p class="item">🏃 <b>Sport:</b> Staying active and fit through different physical activities.</p>
+    <p class="item">🎭 <b>Roleplay:</b> Engaging in imaginative and immersive role-playing scenarios.</p>
+    <p class="item">🎨 <b>Drawing:</b> Creating art and expressing creativity through illustrations.</p>
+  </div>
 
-        <div class="section">
-            <h2>Favorite Songs</h2>
-            <ul>
-                <li><strong>Song 1:</strong> <a href="https://open.spotify.com/intl-de/track/0C4ejWmOTMv8vuYj85mf8m?si=3a02b7b2a39b49af" target="_blank">S&M</a></li>
-                <li><strong>Song 2:</strong> <a href="https://open.spotify.com/intl-de/track/5fYO3w0XpFZFLqNJkTnnl3?si=cd96d68f37154c9c" target="_blank">Peachy</a></li>
-                <li><strong>Song 3:</strong> <a href="https://open.spotify.com/intl-de/track/3jJTrW9rTO5V0RuLNmCp2h?si=971a0e7c3c574ca9" target="_blank">Bow Down</a></li>
-                <li><strong>Song 4:</strong> <a href="https://open.spotify.com/intl-de/track/5Y0Fl1dx7zmMOD35v7LNhf?si=c792163a36154a41" target="_blank">CPR</a></li>
-                <li><strong>Song 5:</strong> <a href="https://open.spotify.com/intl-de/track/5Y0Fl1dx7zmMOD35v7LNhf?si=c792163a36154a41" target="_blank">Dirty Vibe</a></li>
-            </ul>
-        </div>
+  <div class="divider"></div>
 
-        <div class="section contact">
-            <h2>Contact & Social</h2>
-            <ul>
-                <li>🎮 <strong>Gaming Platforms:</strong> <a href="https://steamcommunity.com/id/ThexoXNEOXox/" target="_blank">Steam</a></li>
-                <li>📱 <strong>Social Media:</strong> <a href="https://discordapp.com/users/494168335391391760" target="_blank">Discord</a></li>
-            </ul>
-        </div>
+  <div class="section neon-border">
+    <h3>✦ Favorite Games ✦</h3>
+    <p class="item">🎮 <a href="https://store.steampowered.com/app/381210/Dead_by_Daylight/">Dead by Daylight</a></p>
+    <p class="item">🚀 <a href="https://store.steampowered.com/app/1449110/The_Outer_Worlds_2/">The Outer Worlds 2</a></p>
+    <p class="item">💥 <a href="https://store.steampowered.com/app/397540/Borderlands_3/">Borderlands 3</a></p>
+    <p class="item">🐉 <a href="https://store.steampowered.com/app/1623730/Palworld/">Palworld</a></p>
+    <p class="item">🌃 <a href="https://store.steampowered.com/app/1091500/Cyberpunk_2077/">Cyberpunk 2077</a></p>
+  </div>
 
-        <p class="footer">Stay connected and let's conquer the world together! 🌟</p>
-    </div>
+  <div class="divider"></div>
+
+  <div class="section neon-border">
+    <h3>✦ Favorite Songs ✦</h3>
+    <p class="item">🎧 <a href="https://open.spotify.com/intl-de/track/0C4ejWmOTMv8vuYj85mf8m?si=3a02b7b2a39b49af">S&M</a></p>
+    <p class="item">🎶 <a href="https://open.spotify.com/intl-de/track/3rkSjkhFvhRt4BZKXq99d4?si=3d25746518ba4ea5">Mafia - Remix</a></p>
+    <p class="item">🔥 <a href="https://open.spotify.com/intl-de/track/3jJTrW9rTO5V0RuLNmCp2h?si=971a0e7c3c574ca9">Bow Down</a></p>
+    <p class="item">💻 <a href="https://open.spotify.com/track/6HMxF1RJilVOcdRmxfobya?si=1f0d78d714974e6b">Cool on the Internet</a></p>
+    <p class="item">⚡ <a href="https://open.spotify.com/intl-de/track/0WUIGqyq3zUo8BXchrGu1x?si=ef0ab058a46545b9">Dirty Vibe</a></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section neon-border">
+    <h3>✦ Contact & Social ✦</h3>
+    <p class="item">📱 <b>Discord:</b> <a href="https://discordapp.com/users/494168335391391760">★☆ SinisterBoy ☆★</a></p>
+    <p class="item">🎮 <b>Gaming Platforms:</b> (to be added)</p>
+  </div>
+
+  <div class="footer">
+    ✨ “Always chasing dreams — one game, one song, one story at a time.” ✨
+  </div>
 </body>
 </html>
-
