@@ -1,56 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Quicksand:wght@400;600&display=swap');
 
+/* ----- General Body ----- */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Quicksand', sans-serif;
-  background: #000; /* solid black */
+  background: #000;
   color: #eee;
   overflow-x: hidden;
   position: relative;
 }
 
-/* CSS-only stars */
+/* ----- Multi-layer CSS Galaxy Background ----- */
 body::before, body::after {
   content: '';
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
   z-index: 0;
 }
 
+/* layer 1: faint nebula gradient + stars */
 body::before {
+  background: radial-gradient(circle at 50% 50%, #330033 0%, #000 80%);
   box-shadow:
     5vw 10vh #fff, 15vw 40vh #fff, 25vw 20vh #fff, 35vw 80vh #fff,
     45vw 30vh #fff, 55vw 60vh #fff, 65vw 10vh #fff, 75vw 50vh #fff,
-    85vw 20vh #fff, 95vw 70vh #fff, 50vw 90vh #fff, 20vw 60vh #fff;
-  animation: twinkle1 6s infinite alternate;
+    85vw 20vh #fff, 95vw 70vh #fff, 50vw 90vh #fff, 20vw 60vh #fff,
+    12vw 12vh #fff, 22vw 25vh #fff, 42vw 33vh #fff, 62vw 45vh #fff,
+    82vw 55vh #fff, 92vw 65vh #fff, 72vw 75vh #fff, 52vw 85vh #fff;
+  animation: twinkle1 8s infinite alternate;
 }
 
+/* layer 2: second nebula gradient + more stars */
 body::after {
+  background: radial-gradient(circle at 30% 70%, #220022 0%, #000 80%);
   box-shadow:
     10vw 30vh #fff, 20vw 70vh #fff, 30vw 40vh #fff, 40vw 10vh #fff,
     50vw 50vh #fff, 60vw 20vh #fff, 70vw 60vh #fff, 80vw 80vh #fff,
-    90vw 30vh #fff, 25vw 85vh #fff, 75vw 15vh #fff, 55vw 40vh #fff;
-  animation: twinkle2 8s infinite alternate-reverse;
+    90vw 30vh #fff, 25vw 85vh #fff, 75vw 15vh #fff, 55vw 40vh #fff,
+    5vw 15vh #fff, 35vw 60vh #fff, 65vw 20vh #fff, 85vw 70vh #fff;
+  animation: twinkle2 10s infinite alternate-reverse;
 }
 
+/* ----- Twinkle Animations ----- */
 @keyframes twinkle1 {
-  0% {opacity: 0.3;}
-  50% {opacity: 0.8;}
-  100% {opacity: 0.3;}
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
 }
 
 @keyframes twinkle2 {
-  0% {opacity: 0.3;}
-  50% {opacity: 0.8;}
-  100% {opacity: 0.3;}
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
 }
 
-/* Header */
+/* ----- Optional Floating Particles ----- */
+.particle {
+  position: fixed;
+  width: 2px; height: 2px;
+  background: #ff00ff;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: float 6s infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); opacity: 0.7; }
+  50% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.7; }
+}
+
+/* ----- Header ----- */
 header {
   text-align: center;
   margin-top: 80px;
@@ -73,7 +97,7 @@ h1 {
   margin-top: 5px;
 }
 
-/* Main */
+/* ----- Main Content ----- */
 main {
   display: flex;
   flex-direction: column;
@@ -84,7 +108,7 @@ main {
   z-index: 2;
 }
 
-/* Neon cards */
+/* ----- Neon Glass Cards ----- */
 .card {
   background: rgba(20, 20, 30, 0.65);
   border-radius: 20px;
@@ -102,6 +126,7 @@ main {
   box-shadow: 0 0 30px rgba(255, 0, 255, 0.4), 0 0 60px rgba(0, 255, 255, 0.3);
 }
 
+/* Card Titles */
 h2 {
   font-family: 'Orbitron', sans-serif;
   color: #00ffff;
@@ -110,6 +135,7 @@ h2 {
   text-align: center;
 }
 
+/* Paragraphs & Lists */
 p, li {
   font-size: 1.05rem;
   line-height: 1.6em;
@@ -120,6 +146,7 @@ ul {
   padding: 0;
 }
 
+/* Links */
 a {
   color: #ff66ff;
   text-decoration: none;
@@ -131,7 +158,7 @@ a:hover {
   text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
 }
 
-/* Footer */
+/* ----- Footer ----- */
 footer {
   text-align: center;
   color: #888;
