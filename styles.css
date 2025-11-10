@@ -1,86 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Quicksand:wght@400;600&display=swap');
 
-/* ----- General ----- */
+/* ----- General Body ----- */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Quicksand', sans-serif;
-  background: #000;
+  background: #000; /* fallback black */
   color: #eee;
   overflow-x: hidden;
   position: relative;
 }
 
-/* ----- Stars Layer ----- */
-.stars {
+/* ----- Multi-Layer CSS Galaxy ----- */
+body::before,
+body::after {
+  content: '';
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  z-index: 0;
   pointer-events: none;
+  z-index: 0;
   background: transparent;
+}
+
+/* nebula layers with gradients + stars */
+body::before {
+  background: radial-gradient(circle at 30% 40%, #330033 0%, transparent 80%),
+              radial-gradient(circle at 70% 20%, #220055 0%, transparent 80%),
+              radial-gradient(circle at 50% 80%, #550077 0%, transparent 80%);
   box-shadow:
-    2vw 5vh #fff, 10vw 20vh #fff, 15vw 80vh #fff, 20vw 10vh #fff,
-    25vw 60vh #fff, 30vw 30vh #fff, 35vw 70vh #fff, 40vw 50vh #fff,
-    45vw 90vh #fff, 50vw 25vh #fff, 55vw 40vh #fff, 60vw 75vh #fff,
-    65vw 60vh #fff, 70vw 15vh #fff, 75vw 85vh #fff, 80vw 35vh #fff,
-    85vw 20vh #fff, 90vw 70vh #fff, 95vw 10vh #fff, 98vw 55vh #fff;
-  animation: twinkleStars 6s infinite alternate;
+    /* white sparkling stars */
+    5vw 10vh #fff, 15vw 40vh #fff, 25vw 20vh #fff, 35vw 80vh #fff,
+    45vw 30vh #fff, 55vw 60vh #fff, 65vw 10vh #fff, 75vw 50vh #fff,
+    85vw 20vh #fff, 95vw 70vh #fff, 50vw 90vh #fff, 20vw 60vh #fff,
+    12vw 12vh #fff, 22vw 25vh #fff, 42vw 33vh #fff, 62vw 45vh #fff,
+    82vw 55vh #fff, 92vw 65vh #fff, 72vw 75vh #fff, 52vw 85vh #fff;
+  animation: twinkle1 8s infinite alternate;
 }
 
-@keyframes twinkleStars {
-  0% { opacity: 0.2; }
-  50% { opacity: 1; }
-  100% { opacity: 0.2; }
+body::after {
+  background: radial-gradient(circle at 20% 70%, #003366 0%, transparent 80%),
+              radial-gradient(circle at 80% 60%, #6600cc 0%, transparent 80%),
+              radial-gradient(circle at 60% 30%, #cc33ff 0%, transparent 80%);
+  box-shadow:
+    10vw 30vh #fff, 20vw 70vh #fff, 30vw 40vh #fff, 40vw 10vh #fff,
+    50vw 50vh #fff, 60vw 20vh #fff, 70vw 60vh #fff, 80vw 80vh #fff,
+    90vw 30vh #fff, 25vw 85vh #fff, 75vw 15vh #fff, 55vw 40vh #fff,
+    5vw 15vh #fff, 35vw 60vh #fff, 65vw 20vh #fff, 85vw 70vh #fff;
+  animation: twinkle2 10s infinite alternate-reverse;
 }
 
-/* ----- Nebula Sphere ----- */
-.nebula-sphere {
-  position: fixed;
-  top: 30%;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  margin-left: -150px;
-  margin-top: -150px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #ff66ff 0%, #220033 70%, transparent 100%);
-  box-shadow: 0 0 100px #ff66ff, 0 0 200px #aa33ff;
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* Rays from Sphere */
-.nebula-sphere .ray {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 2px;
-  height: 400px;
-  background: linear-gradient(transparent, #ff66ff50);
-  transform-origin: top center;
-  filter: blur(2px);
-}
-
-.nebula-sphere .ray:nth-child(1){transform:rotate(0deg);}
-.nebula-sphere .ray:nth-child(2){transform:rotate(30deg);}
-.nebula-sphere .ray:nth-child(3){transform:rotate(60deg);}
-.nebula-sphere .ray:nth-child(4){transform:rotate(90deg);}
-.nebula-sphere .ray:nth-child(5){transform:rotate(120deg);}
-.nebula-sphere .ray:nth-child(6){transform:rotate(150deg);}
-.nebula-sphere .ray:nth-child(7){transform:rotate(180deg);}
-.nebula-sphere .ray:nth-child(8){transform:rotate(210deg);}
-.nebula-sphere .ray:nth-child(9){transform:rotate(240deg);}
-.nebula-sphere .ray:nth-child(10){transform:rotate(270deg);}
-.nebula-sphere .ray:nth-child(11){transform:rotate(300deg);}
-.nebula-sphere .ray:nth-child(12){transform:rotate(330deg);}
-
-@keyframes raysPulse {
+/* ----- Twinkle Animations ----- */
+@keyframes twinkle1 {
   0% { opacity: 0.3; }
-  50% { opacity: 0.6; }
+  50% { opacity: 0.8; }
   100% { opacity: 0.3; }
 }
-.nebula-sphere .ray { animation: raysPulse 4s infinite alternate; }
+
+@keyframes twinkle2 {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
+}
+
+/* ----- Optional Floating Particles ----- */
+.particle {
+  position: fixed;
+  width: 2px; height: 2px;
+  background: #ff66ff;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: float 6s infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); opacity: 0.7; }
+  50% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.7; }
+}
 
 /* ----- Header ----- */
 header {
@@ -134,6 +131,7 @@ main {
   box-shadow: 0 0 30px rgba(255, 0, 255, 0.4), 0 0 60px rgba(0, 255, 255, 0.3);
 }
 
+/* Card Titles */
 h2 {
   font-family: 'Orbitron', sans-serif;
   color: #00ffff;
@@ -142,13 +140,18 @@ h2 {
   text-align: center;
 }
 
+/* Paragraphs & Lists */
 p, li {
   font-size: 1.05rem;
   line-height: 1.6em;
 }
 
-ul { list-style: none; padding: 0; }
+ul {
+  list-style: none;
+  padding: 0;
+}
 
+/* Links */
 a {
   color: #ff66ff;
   text-decoration: none;
